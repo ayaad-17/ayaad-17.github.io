@@ -1,0 +1,416 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Ayaad · Occupational Health Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F2F5F4; --surface:#FFFFFF; --ink:#13201E; --muted:#56655F; --line:#D5DEDA;
+  --accent:#0E6B5F; --accent-soft:#DCEEEA; --signal:#B7790F; --signal-soft:#F7ECD6;
+  --alert:#B3402E; --alert-soft:#F6E1DC; --lane:#E9EFED;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0E1514; --surface:#16201E; --ink:#E3ECE9; --muted:#9AABA5; --line:#2A3835;
+    --accent:#52C2AE; --accent-soft:#193531; --signal:#E3AE4A; --signal-soft:#352A15;
+    --alert:#E47C68; --alert-soft:#3A201B; --lane:#1B2725;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0E1514; --surface:#16201E; --ink:#E3ECE9; --muted:#9AABA5; --line:#2A3835;
+  --accent:#52C2AE; --accent-soft:#193531; --signal:#E3AE4A; --signal-soft:#352A15;
+  --alert:#E47C68; --alert-soft:#3A201B; --lane:#1B2725;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:20px;padding-block:0 64px}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+/* Header */
+header{padding-block:56px 40px;display:grid;gap:28px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(40px,7vw,72px);font-weight:700;letter-spacing:-.02em}
+h1 span{color:var(--muted);font-weight:500}
+.lede{font-size:clamp(17px,2vw,19px);max-width:62ch;color:var(--ink)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+
+/* Register */
+.register{padding-block:36px 8px}
+.register h2{font-size:14px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.reg-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.reg-list a{display:grid;grid-template-columns:88px 1fr auto;gap:16px;align-items:baseline;padding:12px 4px;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.reg-list a:hover{background:var(--surface)}
+.reg-list .when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.reg-list .name{font-weight:600}
+.reg-list .kind{font-size:13px;color:var(--muted);text-align:right}
+@media (max-width:600px){.reg-list a{grid-template-columns:70px 1fr}.reg-list .kind{display:none}}
+
+/* Case studies */
+.case{padding-block:56px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:start}
+.case:nth-of-type(even) .visual{order:-1}
+@media (max-width:860px){.case{grid-template-columns:1fr;gap:28px}.case:nth-of-type(even) .visual{order:0}}
+.case-head{display:grid;gap:10px;margin-bottom:22px}
+.case h2{font-size:clamp(26px,3.4vw,34px);font-weight:700;letter-spacing:-.01em}
+.meta{font-family:var(--mono);font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+.meta .tag{color:var(--accent)}
+.blocks{display:grid;gap:18px}
+.block h3{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.block ul{margin:0;padding-left:1.1em;display:grid;gap:4px}
+.skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:22px}
+.skills span{font-size:12.5px;padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+
+.visual{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px;display:grid;gap:16px}
+.visual figcaption{font-size:13px;color:var(--muted)}
+.vtitle{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.scroll{overflow-x:auto}
+svg text{font-family:var(--body)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:12px}
+.stat{border-top:2px solid var(--accent);padding-top:8px}
+.stat b{display:block;font-family:var(--display);font-size:30px;line-height:1;font-variant-numeric:tabular-nums}
+.stat span{font-size:12.5px;color:var(--muted)}
+
+/* Bars */
+.bars{display:grid;gap:10px}
+.bar{display:grid;grid-template-columns:130px 1fr 34px;gap:10px;align-items:center;font-size:14px}
+.bar .track{height:14px;background:var(--lane);border-radius:3px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent)}
+.bar .fill.warn{background:var(--signal)}
+.bar .fill.alert{background:var(--alert)}
+.bar .n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+@media (max-width:420px){.bar{grid-template-columns:100px 1fr 28px;font-size:13px}}
+
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px}
+.pill.ok{background:var(--accent-soft);color:var(--accent)}
+.pill.soon{background:var(--signal-soft);color:var(--signal)}
+.pill.act{background:var(--alert-soft);color:var(--alert)}
+.pill.gap{background:var(--alert-soft);color:var(--alert)}
+
+/* Slides */
+.slides{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.slide{aspect-ratio:4/3;max-width:100%;border:1px solid var(--line);border-radius:6px;background:var(--bg);padding:10px;display:flex;flex-direction:column;justify-content:space-between}
+.slide small{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.slide p{font-weight:600;font-size:13.5px;line-height:1.3}
+.slide.stop{background:var(--alert-soft)}
+.slide.stop p{color:var(--alert)}
+
+.logic{font-family:var(--mono);font-size:12.5px;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:12px;line-height:1.7;overflow-x:auto}
+
+footer{padding-block:40px 0;color:var(--muted);font-size:14px;display:grid;gap:8px;max-width:70ch}
+@media (prefers-reduced-motion:no-preference){.reg-list a{transition:background .15s}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Summer 2026 · Johns Hopkins Medicine · Occupational Health</div>
+  <h1>Ayaad <span>/ project portfolio</span></h1>
+  <p class="lede">Six projects from my administrative internship in the Occupational Health department at Suburban Hospital. The work ran from claims review and contractor compliance to clinic workflow design, and most of it was about the same thing: making sure the right employee gets the right test, vaccine, or follow-up, and that someone can prove it happened.</p>
+  <div class="facts">
+    <div><b>Role</b> Administrative Intern</div>
+    <div><b>Sites touched</b> Suburban, Howard County, Sibley</div>
+    <div><b>Education</b> MS, Health Systems Administration, Georgetown ’26</div>
+  </div>
+</header>
+
+<nav class="register" aria-label="Projects">
+  <h2>Project register</h2>
+  <ol class="reg-list">
+    <li><a href="#claims"><span class="when">Jun 2026</span><span class="name">Lifting injury claims review</span><span class="kind">Data review</span></a></li>
+    <li><a href="#fresenius"><span class="when">Jun–Jul</span><span class="name">Fresenius contractor oversight</span><span class="kind">Vendor compliance</span></a></li>
+    <li><a href="#tv"><span class="when">Jul 2026</span><span class="name">Occupational Health lobby display</span><span class="kind">Staff communication</span></a></li>
+    <li><a href="#flu"><span class="when">Sep 2026</span><span class="name">Flu Champions coverage plan</span><span class="kind">Volunteer scheduling</span></a></li>
+    <li><a href="#fit"><span class="when">Sep 2026</span><span class="name">Mass fit-testing clinic workflow</span><span class="kind">Process design</span></a></li>
+    <li><a href="#competency"><span class="when">Sep 2026</span><span class="name">Master competency tracker</span><span class="kind">Workforce compliance</span></a></li>
+  </ol>
+</nav>
+
+<!-- 1. Claims -->
+<section class="case" id="claims">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Data review</span><span>June 2026</span><span>Excel</span></div>
+      <h2>Lifting injury claims review</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>Workers’ compensation claims from the adult Emergency Department were coded with “lifting” as the cause of injury. Before deciding on prevention steps, the department needed to know what actually caused those injuries.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Built a claims tracker covering claim type, status, cause, body part, and department for each lifting-coded claim from 2024 to 2026.</li>
+        <li>Read each claim narrative and wrote a short summary of how the injury actually happened.</li>
+        <li>Noted where the narrative did not match the cause code, and where equipment came up as a factor.</li>
+      </ul></div>
+      <div class="block"><h3>What it showed</h3><p>Only about half of the claims described lifting or transferring a patient. Three involved repositioning a patient who was already in bed, and one involved no lifting at all. That points to a coding question as well as a safety one, and one narrative pointed to a specific equipment need (a stretcher for car-to-stretcher transfers).</p></div>
+    </div>
+    <div class="skills"><span>Claims analysis</span><span>Root-cause review</span><span>Workers’ comp</span><span>Excel</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">What the narratives described · 8 claims</div>
+    <div class="bars">
+      <div class="bar"><span>Lifting / transfer</span><div class="track"><div class="fill" style="width:50%"></div></div><span class="n">4</span></div>
+      <div class="bar"><span>Repositioning</span><div class="track"><div class="fill warn" style="width:37.5%"></div></div><span class="n">3</span></div>
+      <div class="bar"><span>No lifting</span><div class="track"><div class="fill alert" style="width:12.5%"></div></div><span class="n">1</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>8</b><span>claims reviewed</span></div>
+      <div class="stat"><b>5</b><span>lost-time claims</span></div>
+      <div class="stat"><b>4</b><span>still open</span></div>
+    </div>
+    <figcaption>All eight were from the adult ED. The injured body regions were the neck (3), wrist (2), shoulder, lower back, and foot. Claimant details are left out.</figcaption>
+  </figure>
+</section>
+
+<!-- 2. Fresenius -->
+<section class="case" id="fresenius">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Vendor compliance</span><span>June – July 2026</span><span>Word · flowcharting</span></div>
+      <h2>Fresenius contractor oversight</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>Fresenius dialysis staff work inside five JHM hospitals, but they are employed and onboarded by Fresenius. Occupational Health was getting questions about who owned which records, who to call at each site, and which contracted staff were actually compliant.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Collected points of contact for each site from a long email chain and confirmed the division of work: JHM OH handles baseline and annual fit testing and seasonal flu vaccine, and Fresenius keeps everything else.</li>
+        <li>Took a responsibility flowchart through three drafts to a final version that color-codes JHM and Fresenius steps and shows the quarterly audit cycle.</li>
+        <li>Built a directory and compliance brief listing every contracted employee by site, with status on the OSHA questionnaire, fit testing, and flu records. It includes site-level compliance rates and charts.</li>
+      </ul></div>
+      <div class="block"><h3>Result</h3><p>One reference document that answers “who do I call” and “is this person cleared” for each site. It also sets expectations for monthly roster sharing and how fast document requests get answered.</p></div>
+    </div>
+    <div class="skills"><span>Stakeholder mapping</span><span>Process mapping</span><span>Compliance tracking</span><span>Vendor management</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">Who owns what · final flowchart, redrawn</div>
+    <div class="scroll">
+      <svg viewBox="0 0 460 300" width="100%" style="min-width:380px" role="img" aria-label="Flowchart: Fresenius onboards staff, contacts JHM OH to register in Cority, JHM OH performs fit testing and flu vaccine; Fresenius maintains records; quarterly audits run alongside.">
+        <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+        <rect x="20" y="14" width="230" height="56" rx="6" fill="var(--signal-soft)" stroke="var(--signal)"/>
+        <text x="135" y="38" text-anchor="middle" font-size="13" fill="var(--ink)">Staff onboarded</text>
+        <text x="135" y="55" text-anchor="middle" font-size="13" fill="var(--ink)">through Fresenius</text>
+        <line x1="135" y1="70" x2="135" y2="106" stroke="var(--muted)" marker-end="url(#ah)"/>
+        <rect x="20" y="108" width="230" height="64" rx="6" fill="var(--accent)" />
+        <text x="135" y="131" text-anchor="middle" font-size="13" fill="var(--surface)">Employee or manager contacts</text>
+        <text x="135" y="148" text-anchor="middle" font-size="13" fill="var(--surface)">JHM OH to register in Cority</text>
+        <line x1="135" y1="172" x2="135" y2="208" stroke="var(--muted)" marker-end="url(#ah)"/>
+        <rect x="20" y="210" width="230" height="64" rx="6" fill="var(--accent)"/>
+        <text x="135" y="233" text-anchor="middle" font-size="13" fill="var(--surface)">JHM OH: baseline + annual</text>
+        <text x="135" y="250" text-anchor="middle" font-size="13" fill="var(--surface)">fit testing, flu vaccine</text>
+        <line x1="300" y1="20" x2="300" y2="270" stroke="var(--line)" stroke-width="10" stroke-linecap="round"/>
+        <text x="300" y="150" text-anchor="middle" font-size="11" fill="var(--muted)" transform="rotate(-90 300 150)">Ongoing, outside JHM OH</text>
+        <rect x="320" y="40" width="124" height="90" rx="6" fill="var(--signal-soft)" stroke="var(--signal)"/>
+        <text x="382" y="70" text-anchor="middle" font-size="12.5" fill="var(--ink)">Fresenius keeps</text>
+        <text x="382" y="87" text-anchor="middle" font-size="12.5" fill="var(--ink)">records, status,</text>
+        <text x="382" y="104" text-anchor="middle" font-size="12.5" fill="var(--ink)">and compliance</text>
+        <rect x="320" y="160" width="124" height="90" rx="6" fill="var(--lane)" stroke="var(--line)"/>
+        <text x="382" y="192" text-anchor="middle" font-size="12.5" fill="var(--ink)">Quarterly audits,</text>
+        <text x="382" y="209" text-anchor="middle" font-size="12.5" fill="var(--ink)">JHM OH and</text>
+        <text x="382" y="226" text-anchor="middle" font-size="12.5" fill="var(--ink)">Fresenius together</text>
+      </svg>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>81</b><span>contracted staff tracked</span></div>
+      <div class="stat"><b>5</b><span>hospital sites</span></div>
+      <div class="stat"><b>3</b><span>compliance checks each</span></div>
+    </div>
+    <figcaption>Green steps belong to JHM Occupational Health. Amber steps belong to Fresenius.</figcaption>
+  </figure>
+</section>
+
+<!-- 3. TV -->
+<section class="case" id="tv">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Staff communication</span><span>July 2026</span><span>PowerPoint</span></div>
+      <h2>Occupational Health lobby display</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>Employees passing the Occupational Health office at Suburban had no quick way to find hours and contact details, see when their department’s fit testing was due, or get reminders about safety requirements.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Designed a looping slide set for the department’s TV screen that pairs practical information with safety messaging.</li>
+        <li>Turned the 2025 annual fit-testing schedule into a one-slide view organized by department.</li>
+        <li>Condensed the High Reliability universal skills and the eye protection policy into slides someone can read while walking past.</li>
+        <li>Added a recognition slide to celebrate staff.</li>
+      </ul></div>
+      <div class="block"><h3>Result</h3><p>A ready-to-run TV loop, dated July 1, 2026. I used the same visual style for related materials: N95 and eye protection tip sheets, flu clinic schedules, and multi-site compliance charts.</p></div>
+    </div>
+    <div class="skills"><span>Health communication</span><span>Visual design</span><span>Safety culture</span><span>PowerPoint</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">Slide sequence · 5 slides</div>
+    <div class="slides">
+      <div class="slide"><small>01</small><p>Hours, phone, fax, and email</p></div>
+      <div class="slide"><small>02</small><p>2025 annual fit testing by department</p></div>
+      <div class="slide"><small>03</small><p>High Reliability universal skills</p></div>
+      <div class="slide stop"><small>04</small><p>STOP: when eye protection is required</p></div>
+      <div class="slide"><small>05</small><p>Staff recognition</p></div>
+    </div>
+    <figcaption>The slides play in this order on loop. The High Reliability slide covers Attention, Communication, Speaking Up, Critical Thinking, and Know Why.</figcaption>
+  </figure>
+</section>
+
+<!-- 4. Flu -->
+<section class="case" id="flu">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Volunteer scheduling</span><span>September 2026</span><span>Excel</span></div>
+      <h2>Flu Champions coverage plan</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>Flu Champions are employees who volunteer to give vaccines at flu clinics. Their availability came in as scattered dates and times for three hospitals, and no one could see whether each site actually had coverage.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Compiled every submission into one workbook with a tab for each site: Suburban, Howard County, and Sibley.</li>
+        <li>Built a summary tab that counts filled slots per site and flags any site at zero as a gap, using formulas so it updates as new availability comes in.</li>
+        <li>Put “any site” volunteers on a separate tab so they could be assigned where the need was greatest.</li>
+      </ul></div>
+      <div class="block"><h3>Result</h3><p>The gaps were visible right away. Suburban was well covered, Howard County was thin, and Sibley had no volunteers. That gave the team a clear place to send flexible volunteers and focus recruitment.</p></div>
+    </div>
+    <div class="skills"><span>Gap analysis</span><span>Scheduling</span><span>Multi-site coordination</span><span>Excel formulas</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">Volunteer slots by site · Sep–Nov 2026</div>
+    <div class="bars">
+      <div class="bar"><span>Suburban</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="n">24</span></div>
+      <div class="bar"><span>Howard County</span><div class="track"><div class="fill warn" style="width:33.3%"></div></div><span class="n">8</span></div>
+      <div class="bar"><span>Sibley <span class="pill gap">GAP</span></span><div class="track"><div class="fill alert" style="width:0%"></div></div><span class="n">0</span></div>
+      <div class="bar"><span>Any site</span><div class="track"><div class="fill" style="width:33.3%;opacity:.45"></div></div><span class="n">8</span></div>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>40</b><span>slots compiled</span></div>
+      <div class="stat"><b>3</b><span>hospital sites</span></div>
+      <div class="stat"><b>1</b><span>site flagged as a gap</span></div>
+    </div>
+    <figcaption>Each slot is one volunteer shift someone signed up for. It does not count clinic dates.</figcaption>
+  </figure>
+</section>
+
+<!-- 5. Fit testing -->
+<section class="case" id="fit">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Process design</span><span>September 2026</span><span>Swim-lane diagrams · v3</span></div>
+      <h2>Mass fit-testing clinic workflow</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>Mass N95 fit-testing clinics bring in large numbers of employees in a short window. Each one goes through check-in, three questionnaires, an RN review, possible medical referral, the fit test itself, and documentation in Cority. Handoffs and guest-login records were where things got missed.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Mapped the process from two sides: the employee’s path (QR check-in, SSO or guest login, the OH authorization, OSHA, and TB questionnaires) and the OH staff path.</li>
+        <li>Separated the medical history and no-medical-history routes. Employees who cannot complete a fit test are routed to a PAPR or an NP referral.</li>
+        <li>Wrote out the Cority documentation steps, including the extra steps for guest logins that were easy to skip.</li>
+        <li>Revised both diagrams through three versions.</li>
+      </ul></div>
+      <div class="block"><h3>Result</h3><p>Two diagrams the team can use to train clinic staff and to check that each employee’s record is complete before they leave.</p></div>
+    </div>
+    <div class="skills"><span>Swim-lane mapping</span><span>OSHA respiratory protection</span><span>Cority</span><span>Workflow design</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">OH staff path · simplified</div>
+    <div class="scroll">
+      <svg viewBox="0 0 520 340" width="100%" style="min-width:460px" role="img" aria-label="Swim lane with four lanes: registration, medical history, no medical history, documentation.">
+        <defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="var(--muted)"/></marker></defs>
+        <g font-size="10.5" fill="var(--muted)" font-family="IBM Plex Mono, monospace">
+          <rect x="0" y="0" width="520" height="80" fill="var(--lane)"/>
+          <rect x="0" y="80" width="520" height="90" fill="var(--surface)"/>
+          <rect x="0" y="170" width="520" height="70" fill="var(--lane)"/>
+          <rect x="0" y="240" width="520" height="100" fill="var(--surface)"/>
+          <text x="8" y="16">REGISTRATION</text>
+          <text x="8" y="96">MEDICAL HISTORY</text>
+          <text x="8" y="186">NO MEDICAL HISTORY</text>
+          <text x="8" y="256">DOCUMENTATION</text>
+        </g>
+        <g font-size="11.5" fill="var(--ink)" text-anchor="middle">
+          <rect x="30" y="28" width="120" height="40" rx="5" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="90" y="52">EE submits forms</text>
+          <line x1="150" y1="48" x2="298" y2="48" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <rect x="300" y="28" width="130" height="40" rx="5" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="365" y="46">RN reviews,</text><text x="365" y="60">assigns OSHA</text>
+          <polygon points="470,48 500,68 470,88 440,68" fill="var(--surface)" stroke="var(--signal)"/>
+          <text x="470" y="72" font-size="10.5">Hx?</text>
+          <line x1="430" y1="48" x2="470" y2="48" stroke="var(--muted)"/>
+          <line x1="470" y1="48" x2="470" y2="46" stroke="var(--muted)"/>
+          <line x1="470" y1="88" x2="470" y2="120" stroke="var(--muted)"/>
+          <line x1="470" y1="120" x2="392" y2="120" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <text x="484" y="108" font-size="10" fill="var(--accent)">yes</text>
+          <polygon points="355,100 390,120 355,140 320,120" fill="var(--surface)" stroke="var(--signal)"/>
+          <text x="355" y="118" font-size="10">Can fit</text><text x="355" y="130" font-size="10">test?</text>
+          <line x1="320" y1="120" x2="262" y2="120" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <text x="292" y="113" font-size="10" fill="var(--alert)">no</text>
+          <rect x="150" y="104" width="110" height="32" rx="5" fill="var(--alert-soft)" stroke="var(--alert)"/>
+          <text x="205" y="124">Refer to OH appt.</text>
+          <line x1="355" y1="140" x2="355" y2="158" stroke="var(--muted)"/>
+          <line x1="355" y1="158" x2="262" y2="158" stroke="var(--muted)"/>
+          <text x="372" y="154" font-size="10" fill="var(--accent)">yes</text>
+          <rect x="150" y="146" width="110" height="20" rx="4" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="205" y="160" font-size="10.5">NP questionnaires</text>
+          <line x1="500" y1="68" x2="510" y2="68" stroke="var(--muted)"/>
+          <line x1="510" y1="68" x2="510" y2="205" stroke="var(--muted)"/>
+          <line x1="510" y1="205" x2="262" y2="205" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <text x="496" y="198" font-size="10" fill="var(--alert)">no</text>
+          <rect x="150" y="190" width="110" height="30" rx="5" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="205" y="209">RN signs form</text>
+          <line x1="150" y1="156" x2="128" y2="156" stroke="var(--muted)"/>
+          <line x1="150" y1="205" x2="128" y2="205" stroke="var(--muted)"/>
+          <line x1="128" y1="156" x2="128" y2="258" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <polygon points="128,260 160,285 128,310 96,285" fill="var(--surface)" stroke="var(--accent)"/>
+          <text x="128" y="289" font-size="10.5">Fit test</text>
+          <line x1="160" y1="285" x2="173" y2="285" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <rect x="175" y="265" width="88" height="40" rx="5" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="219" y="282">Record mask</text><text x="219" y="296">type</text>
+          <line x1="263" y1="285" x2="276" y2="285" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <rect x="278" y="258" width="112" height="54" rx="5" fill="var(--accent-soft)" stroke="var(--accent)"/>
+          <text x="334" y="276">Cority: encounter,</text><text x="334" y="290">clearance, fit test,</text><text x="334" y="304">SEGs</text>
+          <line x1="390" y1="285" x2="403" y2="285" stroke="var(--muted)" marker-end="url(#ah2)"/>
+          <rect x="405" y="258" width="102" height="54" rx="5" fill="var(--signal-soft)" stroke="var(--signal)" stroke-dasharray="4 3"/>
+          <text x="456" y="280">Guest login:</text><text x="456" y="294">match to EE ID</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Redrawn from the version 3 swim lane (Sept 9, 2026). The dashed step only applies to employees who checked in with a guest login.</figcaption>
+  </figure>
+</section>
+
+<!-- 6. Competency -->
+<section class="case" id="competency">
+  <div>
+    <div class="case-head">
+      <div class="meta"><span class="tag">Workforce compliance</span><span>September 2026</span><span>Excel</span></div>
+      <h2>Master competency tracker</h2>
+    </div>
+    <div class="blocks">
+      <div class="block"><h3>Problem</h3><p>OH staff competencies were spread across separate source forms, each with its own rating scale and renewal rules. These included fit testing validation, vaccine preparation and administration, and point-of-care urine drug screening. No single view showed who was current and who was overdue.</p></div>
+      <div class="block"><h3>What I did</h3><ul>
+        <li>Pulled every checklist item from the source forms into one item bank. For each item I recorded its domain, rating scale, assessment method, and whether the form states a renewal period.</li>
+        <li>Built an employee tracker with dates, results, and status for each competency area, with dropdowns to keep entries consistent.</li>
+        <li>Wrote a roll-up formula that gives each person one overall status.</li>
+      </ul></div>
+      <div class="block"><h3>Result</h3><p>One workbook where a manager can see at a glance who needs attention. The item bank also shows where the source forms leave renewal requirements unstated.</p></div>
+    </div>
+    <div class="skills"><span>Competency management</span><span>Data validation</span><span>Excel formulas</span><span>Regulatory readiness</span></div>
+  </div>
+  <figure class="visual" style="margin:0">
+    <div class="vtitle">Item bank · 99 items across 16 domains</div>
+    <div class="bars">
+      <div class="bar"><span>Fit testing</span><div class="track"><div class="fill" style="width:38.9%"></div></div><span class="n">14</span></div>
+      <div class="bar"><span>Vaccine admin</span><div class="track"><div class="fill" style="width:36.1%"></div></div><span class="n">13</span></div>
+      <div class="bar"><span>Clinical skills</span><div class="track"><div class="fill" style="width:30.6%"></div></div><span class="n">11</span></div>
+      <div class="bar"><span>POC drug screen</span><div class="track"><div class="fill" style="width:27.8%"></div></div><span class="n">10</span></div>
+      <div class="bar"><span>Vaccine prep</span><div class="track"><div class="fill" style="width:25%"></div></div><span class="n">9</span></div>
+      <div class="bar"><span>11 other domains</span><div class="track"><div class="fill" style="width:100%;opacity:.45"></div></div><span class="n">36</span></div>
+    </div>
+    <div class="vtitle">Overall status roll-up</div>
+    <div class="logic">if any area is <span class="pill act">Overdue</span> → Action Needed<br>else if any is <span class="pill soon">Due Soon</span> → Review Soon<br>else → <span class="pill ok">On Track</span></div>
+    <figcaption>The other eleven domains include administrative work, records, workers’ comp case management, regulatory compliance, and patient education.</figcaption>
+  </figure>
+</section>
+
+<footer>
+  <p>All figures are counts from my own working files. Names of employees, claimants, and site contacts are left out, and the diagrams are redrawn versions of internal documents.</p>
+</footer>
+</div>
+
+</body></html>
